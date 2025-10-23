@@ -1,0 +1,140 @@
+/* 1. Reset e Fundo (Ajustando body para a cor correta) */
+html {
+    /* Cor de fundo da sua imagem */
+    background-color: #F18F3F; 
+}
+
+body {
+    margin: 0;
+    color: #1A1A1A;
+    font-family: Arial, sans-serif;
+    /* Configuração para centralizar TODO o conteúdo na tela */
+    display: flex;
+    flex-direction: column; /* Organiza os filhos (logo e form) verticalmente */
+    align-items: center; /* Centraliza horizontalmente o logo e o formulário */
+    min-height: 100vh; /* Ocupa a altura total da viewport */
+}
+
+#logo{
+    display:flex;
+    flex-direction: row;
+  
+}
+
+
+
+
+/* Estilos para Imagem e Cabeçalho (Baseado no seu código) */
+#img {
+    max-width: 200px; /* Limita o tamanho da imagem */
+    height: auto;
+    margin-top: 50px; /* Adiciona espaço acima da logo */
+    margin-bottom: 30px;
+}
+
+#titulo{
+    margin-top: 130px;
+    margin-bottom: 0PX;
+    padding: 0;
+
+}
+
+
+.form-group {
+     
+    align-items: center; 
+    margin-bottom: 15px; 
+    
+    /* CENTRALIZA o grupo de Label + Input no seu container */
+    /* Sem isso, o form-group ficaria à esquerda do #formInscricao */
+    justify-content: center; 
+}
+
+.form-group label {
+    /* Removemos o width fixo. A largura será decidida pelo conteúdo da label. */
+    /* text-align: right; não é mais necessário se a linha está centralizada. */
+    margin-right: 10px;
+    font-weight: bold; /* Deixa as labels mais visíveis */
+    white-space: nowrap; /* Impede a quebra de linha da label */
+}
+
+.form-group input {
+  
+    width: 200px;
+    flex-grow: 0; 
+    flex-shrink: 0;
+
+    /* Ajustes visuais */
+    background-color: #FFFFFF;
+    padding: 8px;
+    border: 3px solid  #1A1A1A;
+    border-radius: 9px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.form-group select{
+   width: 216px;
+    flex-grow: 0; 
+    flex-shrink: 0;
+    /* Ajustes visuais */
+    background-color: #FFFFFF;
+    padding: 8px;
+    border: 3px solid  #1A1A1A;
+    border-radius: 9px;
+    box-shadow: 1px 1px 2px  #1A1A1A;
+}
+
+/* 4. Estilo do Botão */
+button[type="submit"] {
+    /* O 'margin: auto' já garante a centralização do botão */
+    display: block; 
+    color: #e0e0e0;
+    background-color: #1A1A1A;
+    width: 150px; 
+    margin: 20px auto 0 auto; 
+    padding: 10px 15px;
+    border: 1px solid #1A1A1A;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover {
+    /* 1. Altera a cor de fundo para um tom mais claro (para dar a impressão de "brilho") */
+    background-color: #FFC933; 
+    
+    /* 2. Adiciona uma sombra sutil ao redor do botão */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+#rodape {
+    /* 1. Fixa o elemento na tela */
+    position: fixed; 
+    
+    /* 2. Fixa na parte inferior */
+    bottom: 0; 
+    
+    /* 3. Estende por toda a largura */
+    left: 0;
+    width: 100%;
+    
+    /* 4. Estilos de aparência */
+    background-color: #1A1A1A; /* Cor escura para contrastar (ajuste se quiser a cor laranja) */
+    color: white; 
+    padding: 10px 0; /* Espaçamento interno */
+    text-align: center; /* Centraliza o texto */
+    font-size: 14px;
+    z-index: 1000; /* Garante que fique acima de outros elementos */
+}
+
+/* Estilo para o link "Manual" */
+#rodape a {
+    color: #f7a956; /* Uma cor que se destaque no fundo escuro (ex: o laranja da sua página) */
+    text-decoration: none; /* Remove o sublinhado padrão do link */
+    font-weight: bold;
+    margin-left: 5px; /* Pequeno espaço entre "por:" e "Manual" */
+}
+
+#rodape a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
